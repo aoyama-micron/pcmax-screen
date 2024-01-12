@@ -7,7 +7,7 @@ const Top: FC<TopProps> = (props) => {
 	let pcmax_json = [
 		{
 			id: "home",
-			link: "/pcmax",
+			link: "/pcmax/home",
 			name: "ホーム",
 		},
 		{
