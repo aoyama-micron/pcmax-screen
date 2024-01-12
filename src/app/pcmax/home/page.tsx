@@ -31,7 +31,7 @@ const Home: FC<HomeProps> = (props) => {
 										{item.message.length > 20 ? item.message.slice(0, 20) + "…" : item.message}
 									</span>
 									{item.stat === 1 ? (
-										<label className="imahima flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-sm leading-none text-white">
+										<label className="`${styles.imahima}` flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-sm leading-none text-white">
 											いま
 											<br />
 											ヒマ

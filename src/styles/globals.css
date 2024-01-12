@@ -9,13 +9,12 @@
 .btn.pink {
 	@apply bg-red-400 text-white;
 }
-
 .image-fit {
 	object-fit: contain;
 	position: relative !important;
 	width: 100% !important;
 }
-
+/* ホームいまひまラベル */
 .imahima {
 	position: absolute;
 	right: -5px;
