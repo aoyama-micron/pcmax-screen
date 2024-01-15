@@ -1,18 +1,18 @@
-import girls from '@/app/pcmax/girls.json';
-import Footer from '@/app/pcmax/home/footer';
-import Header from '@/app/pcmax/home/header';
-import type { Metadata } from 'next';
-import Image from 'next/image';
-import { FC } from 'react';
+import girls from "@/app/pcmax/girls.json";
+import Footer from "@/app/pcmax/seek/footer";
+import Header from "@/app/pcmax/seek/header";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { FC } from "react";
 
-type HomeProps = {};
+type SeekProps = {};
 
 export const metadata: Metadata = {
-	title: 'PCMAXホーム画面',
-	description: 'PCMAXホーム画面',
+	title: "PCMAX募集掲示板画面",
+	description: "PCMAX募集掲示板画面",
 };
 
-const Home: FC<HomeProps> = (props) => {
+const Seek: FC<SeekProps> = (props) => {
 	return (
 		<>
 			<Header />
@@ -34,7 +34,7 @@ const Home: FC<HomeProps> = (props) => {
 										{item.area}
 									</b>
 									<span className="block text-xs leading-tight">
-										{item.message.length > 20 ? item.message.slice(0, 20) + '…' : item.message}
+										{item.message.length > 20 ? item.message.slice(0, 20) + "…" : item.message}
 									</span>
 									{item.stat === 1 ? (
 										<label className="imahima flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-sm leading-none text-white">
@@ -43,7 +43,7 @@ const Home: FC<HomeProps> = (props) => {
 											ヒマ
 										</label>
 									) : (
-										''
+										""
 									)}
 								</div>
 							</div>
@@ -56,4 +56,4 @@ const Home: FC<HomeProps> = (props) => {
 	);
 };
 
-export default Home;
+export default Seek;

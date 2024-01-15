@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 .btn {
-	@apply flex w-full items-center justify-center rounded-full text-lg font-bold;
+	@apply leading-1em text-5vw flex w-full items-center justify-center rounded-full font-bold;
 	height: 3.5em;
 }
 .btn.pink {
 	@apply bg-red-400 text-white;
+}
+.btn.line {
+	@apply bg-line;
 }
 .image-fit {
 	object-fit: contain;
