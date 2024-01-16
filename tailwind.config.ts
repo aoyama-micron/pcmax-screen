@@ -26,8 +26,12 @@ const config: Config = {
 				"1.8em": "1.8em",
 				"1.9em": "1.9em",
 				"2em": "2em",
+				"2.5vw": "2.5vw",
+				"2.8vw": "2.8vw",
 				"3vw": "3vw",
+				"3.2vw": "3.2vw",
 				"3.5vw": "3.5vw",
+				"3.7vw": "3.7vw",
 				"4vw": "4vw",
 				"4.5vw": "4.5vw",
 				"5vw": "5vw",
@@ -45,8 +49,16 @@ const config: Config = {
 			//leading
 			lineHeight: {
 				"1em": "1em",
+				"1.1em": "1.1em",
 				"1.25em": "1.25em",
 				"1.5em": "1.5em",
+			},
+			width: {
+				"22vw": "22vw",
+			},
+			height: {
+				"2em": "2em",
+				"3em": "3em",
 			},
 		},
 	},

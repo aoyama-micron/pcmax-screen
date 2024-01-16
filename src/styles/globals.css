@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-	@apply leading-1em text-5vw flex w-full items-center justify-center rounded-full font-bold;
+	@apply flex w-full items-center justify-center rounded-full text-5vw font-bold leading-1em;
 	height: 3.5em;
 }
 .btn.pink {
@@ -23,4 +23,50 @@
 	right: -5px;
 	top: 0;
 	transform: scale(0.85);
+}
+/* 募集 */
+.flex-0-0-22vw {
+	flex: 0 0 22vw;
+}
+.flex-1-1-100\% {
+	flex: 1 1 100%;
+}
+.seek-label {
+	@apply h-2em inline-flex items-center justify-center rounded-full text-3vw leading-1em text-gray-600;
+}
+.seek-label.type-1 {
+	width: 8em;
+	background-color: #fbe5c5;
+}
+.seek-label.type-2 {
+	width: 8em;
+	background-color: #c2ebe8;
+}
+.seek-label.type-3 {
+	width: 11em;
+	background-color: #bceaf5;
+}
+.seek-label.type-4 {
+	width: 8em;
+	background-color: #dcc5f2;
+}
+.seek-label.type-1:before {
+	content: "今からあそぼ";
+}
+.seek-label.type-2:before {
+	content: "ご飯いきたい";
+}
+.seek-label.type-3:before {
+	content: "予定や希望が合えば";
+}
+.seek-label.type-4:before {
+	content: "同じ趣味募集";
+}
+.seek-eye {
+	display: inline-block;
+	padding-right: 1.7em;
+	background-image: url(/images/eye.png);
+	background-size: 1.4em 1.4em;
+	background-position: right center;
+	background-repeat: no-repeat;
 }
