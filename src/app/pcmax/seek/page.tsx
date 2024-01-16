@@ -7,23 +7,16 @@ import { FC } from "react";
 
 type SeekProps = {};
 
-// ランダムにgirls[]の中身をシャッフルする関数
-function shuffle(array: any[]) {
+const shuffle = (array: any[]) => {
 	let currentIndex = array.length,
 		randomIndex;
-
-	// まだシャッフルされていない要素がある限り
 	while (currentIndex != 0) {
-		// ランダムなインデックスを選ぶ
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex--;
-
-		// 現在の要素とランダムに選んだ要素を入れ替える
 		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
 	}
-
 	return array;
-}
+};
 
 export const metadata: Metadata = {
 	title: "PCMAX募集掲示板画面",
@@ -31,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 const Seek: FC<SeekProps> = (props) => {
-	const shuffledGirls = shuffle(girls); // girls[]をシャッフルする
+	const shuffledGirls = shuffle(girls);
 	let seektime = new Date();
 
 	return (

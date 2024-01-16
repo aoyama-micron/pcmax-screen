@@ -1,18 +1,30 @@
-import girls from '@/app/pcmax/girls.json';
-import Footer from '@/app/pcmax/home/footer';
-import Header from '@/app/pcmax/home/header';
-import type { Metadata } from 'next';
-import Image from 'next/image';
-import { FC } from 'react';
+import girls from "@/app/pcmax/girls.json";
+import Footer from "@/app/pcmax/home/footer";
+import Header from "@/app/pcmax/home/header";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { FC } from "react";
 
 type HomeProps = {};
 
+function shuffle(array: any[]) {
+	let currentIndex = array.length,
+		randomIndex;
+	while (currentIndex != 0) {
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+	}
+	return array;
+}
+
 export const metadata: Metadata = {
-	title: 'PCMAXホーム画面',
-	description: 'PCMAXホーム画面',
+	title: "PCMAXホーム画面",
+	description: "PCMAXホーム画面",
 };
 
 const Home: FC<HomeProps> = (props) => {
+	const shuffledGirls = shuffle(girls);
 	return (
 		<>
 			<Header />
@@ -34,7 +46,7 @@ const Home: FC<HomeProps> = (props) => {
 										{item.area}
 									</b>
 									<span className="block text-xs leading-tight">
-										{item.message.length > 20 ? item.message.slice(0, 20) + '…' : item.message}
+										{item.message.length > 20 ? item.message.slice(0, 20) + "…" : item.message}
 									</span>
 									{item.stat === 1 ? (
 										<label className="imahima flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-sm leading-none text-white">
@@ -43,7 +55,7 @@ const Home: FC<HomeProps> = (props) => {
 											ヒマ
 										</label>
 									) : (
-										''
+										""
 									)}
 								</div>
 							</div>
