@@ -1,4 +1,4 @@
-import girls from "@/app/pcmax/girls.json";
+import girls from "@/app/pcmax/message.json";
 import Footer from "@/app/pcmax/message/footer";
 import Header from "@/app/pcmax/message/header";
 import type { Metadata } from "next";
@@ -7,46 +7,45 @@ import { FC } from "react";
 
 type MessageProps = {};
 
+// ランダムにgirls[]の中身をシャッフルする関数
+function shuffle(array: any[]) {
+	let currentIndex = array.length,
+		randomIndex;
+
+	// まだシャッフルされていない要素がある限り
+	while (currentIndex != 0) {
+		// ランダムなインデックスを選ぶ
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		// 現在の要素とランダムに選んだ要素を入れ替える
+		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+	}
+
+	return array;
+}
+
 export const metadata: Metadata = {
 	title: "PCMAXメッセージ画面",
 	description: "PCMAXメッセージ画面",
 };
 
 const Message: FC<MessageProps> = (props) => {
+	const shuffledGirls = shuffle(girls); // girls[]をシャッフルする
 	return (
 		<>
 			<Header />
 			<main className="min-h-screen py-5">
-				<ul className="mx-3 grid grid-cols-2">
-					{girls.map((item) => (
+				<ul className="">
+					{shuffledGirls.map((item) => (
 						<li key={item.id} className="mx-3 mb-1">
-							<div className="relative">
-								<Image
-									className="block rounded-full"
-									src={`/images/${item.id}.jpg`}
-									width={200}
-									height={200}
-									alt="Next.js"
-								/>
-								<div className="h-16 px-1 pt-1 text-gray-700">
-									<b className="block pb-1 text-xs text-pink-500">
-										<span className="pr-2">{item.age}歳</span>
-										{item.area}
-									</b>
-									<span className="block text-xs leading-tight">
-										{item.message.length > 20 ? item.message.slice(0, 20) + "…" : item.message}
-									</span>
-									{item.stat === 1 ? (
-										<label className="imahima flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-sm leading-none text-white">
-											いま
-											<br />
-											ヒマ
-										</label>
-									) : (
-										""
-									)}
-								</div>
-							</div>
+							<Image
+								className="block rounded-full"
+								src={`/images/${item.id}.jpg`}
+								width={200}
+								height={200}
+								alt="Next.js"
+							/>
 						</li>
 					))}
 				</ul>
