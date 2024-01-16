@@ -50,13 +50,22 @@ const config: Config = {
 			lineHeight: {
 				"1em": "1em",
 				"1.1em": "1.1em",
+				"1.2em": "1.2em",
 				"1.25em": "1.25em",
 				"1.5em": "1.5em",
 			},
 			width: {
+				"19vw": "19vw",
+				"20vw": "20vw",
 				"22vw": "22vw",
+				"1.2em": "1.2em",
+				"1.5em": "1.5em",
+				"2em": "2em",
+				"3em": "3em",
 			},
 			height: {
+				"1.2em": "1.2em",
+				"1.5em": "1.5em",
 				"2em": "2em",
 				"3em": "3em",
 			},

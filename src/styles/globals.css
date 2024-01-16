@@ -17,20 +17,30 @@
 	position: relative !important;
 	width: 100% !important;
 }
-/* ホームいまひまラベル */
+.flex-0-0-22vw {
+	flex: 0 0 22vw;
+}
+.flex-0-0-6vw {
+	flex: 0 0 6vw;
+}
+.flex-0-0-19vw {
+	flex: 0 0 19vw;
+}
+.flex-1-1-100\% {
+	flex: 1 1 100%;
+}
+/* --------------------------------------------------
+ホーム 
+-------------------------------------------------- */
 .imahima {
 	position: absolute;
 	right: -5px;
 	top: 0;
 	transform: scale(0.85);
 }
-/* 募集 */
-.flex-0-0-22vw {
-	flex: 0 0 22vw;
-}
-.flex-1-1-100\% {
-	flex: 1 1 100%;
-}
+/* --------------------------------------------------
+募集 
+-------------------------------------------------- */
 .seek-label {
 	@apply h-2em inline-flex items-center justify-center rounded-full text-3vw leading-1em text-gray-600;
 }
@@ -69,4 +79,31 @@
 	background-size: 1.4em 1.4em;
 	background-position: right center;
 	background-repeat: no-repeat;
+}
+/* --------------------------------------------------
+メッセージ 
+-------------------------------------------------- */
+.icon-svg {
+	@apply w-1.2em h-1.2em block bg-contain bg-center bg-no-repeat;
+}
+.icon-svg.arrow-r {
+	background-image: url(/images/icon-arrow-r.svg);
+}
+.new-label {
+	@apply absolute block h-0 w-0;
+	top: 1px;
+	right: 0px;
+	border-top: 5.2vw solid orange;
+	border-left: 5.2vw solid transparent;
+	border-right: 5.2vw solid orange;
+	border-bottom: 5.2vw solid transparent;
+}
+.new-label:before {
+	position: absolute;
+	top: -3vw;
+	right: -5vw;
+	content: "NEW";
+	color: white;
+	font-size: 2.6vw;
+	transform: rotate(45deg) scale(0.9);
 }
