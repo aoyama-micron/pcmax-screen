@@ -1,11 +1,10 @@
 import girls from "@/app/pcmax/girls.json";
-import Footer from "@/app/pcmax/home/footer";
-import Header from "@/app/pcmax/home/header";
+import Footer from "@/app/pcmax/prof/footer";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { FC } from "react";
 
-type HomeProps = {};
+type ProfProps = {};
 
 function shuffle(array: any[]) {
 	let currentIndex = array.length,
@@ -23,11 +22,10 @@ export const metadata: Metadata = {
 	description: "PCMAXホーム画面",
 };
 
-const Home: FC<HomeProps> = (props) => {
+const Prof: FC<ProfProps> = (props) => {
 	const shuffledGirls = shuffle(girls);
 	return (
 		<>
-			<Header />
 			<main className="min-h-screen py-5">
 				<ul className="mx-3 grid grid-cols-2">
 					{girls.map((item) => (
@@ -69,4 +67,4 @@ const Home: FC<HomeProps> = (props) => {
 	);
 };
 
-export default Home;
+export default Prof;

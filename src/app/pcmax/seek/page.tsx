@@ -1,6 +1,6 @@
-import girls from "@/app/pcmax/seek.json";
-import Footer from "@/app/pcmax/seek/footer";
-import Header from "@/app/pcmax/seek/header";
+import girls from "@/app/pcmax/message.json";
+import Footer from "@/app/pcmax/message/footer";
+import Header from "@/app/pcmax/message/header";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { FC } from "react";
@@ -43,16 +43,17 @@ const Seek: FC<SeekProps> = (props) => {
 						});
 						return (
 							<li key={item.id} className="flex border-b px-3 py-4">
-								<div className="w-22vw flex-0-0-22vw mr-3">
+								<div className="flex-0-0-22vw mr-3 w-22vw">
 									<Image
 										className="block rounded"
 										src={`/images/${item.id}.jpg`}
 										width={200}
 										height={200}
 										alt="Next.js"
+										priority
 									/>
 								</div>
-								<div className="leading-1.1em flex-1-1-100% flex flex-col justify-between">
+								<div className="flex-1-1-100% flex flex-col justify-between leading-1.1em">
 									<div className="flex w-full items-center justify-between">
 										<label htmlFor="" className={`seek-label type-${item.stat}`}></label>
 										<span className="seek-eye text-2.8vw text-gray-400">
@@ -61,7 +62,7 @@ const Seek: FC<SeekProps> = (props) => {
 										</span>
 									</div>
 									<p className="text-3.5vw font-bold text-pink-500">{item.message}</p>
-									<div className="text-3.2vw flex">
+									<div className="flex text-3.2vw">
 										<span className="pr-2">{item.name}</span>
 										<span className="pr-2">{item.age}歳</span>
 										<span className="area">{item.area}</span>

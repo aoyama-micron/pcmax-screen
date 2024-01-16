@@ -47,17 +47,18 @@ const Message: FC<MessageProps> = (props) => {
 								key={item.id}
 								className="relative flex items-stretch justify-center overflow-hidden border-b px-3 py-3"
 							>
-								<div className="w-19vw flex-0-0-19vw mr-3">
+								<div className="flex-0-0-19vw mr-3 w-19vw">
 									<Image
 										className="block rounded-full"
 										src={`/images/${item.id}.jpg`}
 										width={200}
 										height={200}
 										alt="Next.js"
+										priority
 									/>
 								</div>
 								<div className="flex-1-1-100% pt-1">
-									<div className="text-3.2vw leading-1.2em flex justify-between">
+									<div className="flex justify-between text-3.2vw leading-1.2em">
 										<span className="text-pink-500">{item.name}</span>
 										<span className="text-3vw text-gray-400">{formattedTime}</span>
 									</div>

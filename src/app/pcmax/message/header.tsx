@@ -6,7 +6,13 @@ const Header: React.FC = () => {
 	return (
 		<>
 			<header className="fixed left-0 right-0 top-0 z-50 w-full border-b border-gray-300">
-				<Image className="image-fit" src={`/images/_header_message.png`} alt="メッセージヘッダー" fill />
+				<Image
+					className="image-fit"
+					src={`/images/_header_message.png`}
+					alt="メッセージヘッダー"
+					fill
+					priority
+				/>
 				<button
 					className="absolute right-0 top-0 h-full w-full bg-transparent"
 					onClick={() => {
@@ -14,12 +20,13 @@ const Header: React.FC = () => {
 					}}
 				></button>
 			</header>
-			<div>
+			<div className="relative h-auto w-full">
 				<Image
 					className="image-fit"
 					src={`/images/_header_message_dummy.png`}
 					alt="メッセージヘッダーダミー"
 					fill
+					priority
 				/>
 			</div>
 		</>

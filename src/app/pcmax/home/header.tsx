@@ -14,8 +14,8 @@ const Header: React.FC = () => {
 					}}
 				></button>
 			</header>
-			<div>
-				<Image className="image-fit" src={`/images/_header_dummy.png`} alt="ヘッダーダミー" fill />
+			<div className="relative h-auto w-full">
+				<Image className="image-fit relative" src={`/images/_header_dummy.png`} alt="ヘッダーダミー" fill />
 			</div>
 		</>
 	);
