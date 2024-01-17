@@ -1,4 +1,4 @@
-import girls from "@/app/pcmax/girls.json";
+import girls from "@/app/pcmax/home.json";
 import Footer from "@/app/pcmax/home/footer";
 import Header from "@/app/pcmax/home/header";
 import type { Metadata } from "next";
