@@ -19,7 +19,7 @@ const Prof: FC<ProfProps> = (props) => {
 				/>
 			</header>
 			<main className="min-h-screen">
-				<div className="h-100vh w-100vw relative overflow-hidden">
+				<div className="h-100vh w-100vw girlScroll relative overflow-hidden">
 					<ul className="w-700% h-100vh l- absolute left-0 top-0 flex" id="girlScroll">
 						{girls.map((item) => (
 							<li key={item.id} className="w-100vw h-100vh overflow-hidden">

@@ -42,7 +42,7 @@
 募集 
 -------------------------------------------------- */
 .seek-label {
-	@apply h-2em inline-flex items-center justify-center rounded-full text-3vw leading-1em text-gray-600;
+	@apply inline-flex h-2em items-center justify-center rounded-full text-3vw leading-1em text-gray-600;
 }
 .seek-label.type-1 {
 	width: 8em;
@@ -84,7 +84,7 @@
 メッセージ 
 -------------------------------------------------- */
 .icon-svg {
-	@apply w-1.2em h-1.2em block bg-contain bg-center bg-no-repeat;
+	@apply block h-1.2em w-1.2em bg-contain bg-center bg-no-repeat;
 }
 .icon-svg.arrow-r {
 	background-image: url(/images/icon-arrow-r.svg);
