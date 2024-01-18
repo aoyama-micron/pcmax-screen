@@ -3,6 +3,8 @@ import girls from "@/app/pcmax/prof.json";
 import Footer from "@/app/pcmax/prof/footer";
 import Image from "next/image";
 import React, { FC } from "react";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 type ProfProps = {};
 
@@ -19,10 +21,17 @@ const Prof: FC<ProfProps> = (props) => {
 				/>
 			</header>
 			<main className="min-h-screen">
-				<div className="h-100vh w-100vw girlScroll relative overflow-hidden">
-					<ul className="w-700% h-100vh l- absolute left-0 top-0 flex" id="girlScroll">
+				<div className="girlScroll relative h-100vh w-100vw overflow-hidden">
+					<Swiper
+						className="girlScroll"
+						spaceBetween={0}
+						slidesPerView={1}
+						onSlideChange={() => console.log("slide change")}
+						onSwiper={(swiper) => console.log(swiper)}
+					>
 						{girls.map((item) => (
-							<li key={item.id} className="w-100vw h-100vh overflow-hidden">
+							<SwiperSlide key={item.id}>
+								{/* <li key={item.id} className="h-100vh w-100vw overflow-hidden"> */}
 								<div className="relative flex w-full  border-b border-gray-300">
 									<Image
 										className="image-fit"
@@ -37,7 +46,7 @@ const Prof: FC<ProfProps> = (props) => {
 										</span>
 									</div>
 								</div>
-								<div className="h-100vw relative w-full">
+								<div className="relative h-100vw w-full">
 									<Image
 										className="block"
 										src={`/images/prof/prof_${item.id}.jpg`}
@@ -45,7 +54,12 @@ const Prof: FC<ProfProps> = (props) => {
 										priority
 										fill
 									/>
-									<div className="h-20vw absolute bottom-0 left-0 right-0 flex items-end pb-4 pl-4">
+									<div
+										className="absolute bottom-0 left-0 right-0 flex h-20vw items-end pb-4 pl-4"
+										style={{
+											background: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)",
+										}}
+									>
 										<div className="text-3.5vw text-white">
 											<span className="pr-2">{item.age}歳</span>
 											<span>{item.area}</span>
@@ -58,7 +72,7 @@ const Prof: FC<ProfProps> = (props) => {
 										Array.from({ length: item.snap }, (_, index) => index + 1).map((index) => (
 											<React.Fragment key={`${item.id}-${index}`}>
 												{index > 1}
-												<span className="h-17vw w-17vw relative mr-2">
+												<span className="relative mr-2 h-17vw w-17vw">
 													<Image
 														className="block rounded-lg"
 														src={`/images/prof/prof_${item.id}-${index}.jpg`}
@@ -82,9 +96,9 @@ const Prof: FC<ProfProps> = (props) => {
 										</React.Fragment>
 									))}
 								</div>
-							</li>
+							</SwiperSlide>
 						))}
-					</ul>
+					</Swiper>
 				</div>
 			</main>
 			<Footer />
