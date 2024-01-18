@@ -55,6 +55,7 @@ const config: Config = {
 				"1.5em": "1.5em",
 			},
 			width: {
+				"14vw": "14vw",
 				"17vw": "17vw",
 				"18vw": "18vw",
 				"19vw": "19vw",
@@ -68,6 +69,7 @@ const config: Config = {
 				"700%": "700%",
 			},
 			height: {
+				"14vw": "14vw",
 				"17vw": "17vw",
 				"18vw": "18vw",
 				"19vw": "19vw",

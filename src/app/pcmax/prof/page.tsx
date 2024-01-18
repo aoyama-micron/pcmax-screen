@@ -55,15 +55,29 @@ const Prof: FC<ProfProps> = (props) => {
 										fill
 									/>
 									<div
-										className="absolute bottom-0 left-0 right-0 flex h-20vw items-end pb-4 pl-4"
+										className="absolute bottom-0 left-0 right-0 flex h-20vw items-end pb-4 pl-4 pr-4"
 										style={{
 											background: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)",
 										}}
 									>
 										<div className="text-3.5vw text-white">
-											<span className="pr-2">{item.age}歳</span>
-											<span>{item.area}</span>
+											<div>
+												<span className="pr-2">{item.age}歳</span>
+												<span>{item.area}</span>
+											</div>
+											<div className="flex items-center text-2.5vw">
+												<span className="time-bg pr-1">最終ログイン</span>
+												<span className="">
+													{new Date().toLocaleString("ja-JP", {
+														month: "2-digit",
+														day: "2-digit",
+														hour: "2-digit",
+														minute: "2-digit",
+													})}
+												</span>
+											</div>
 										</div>
+										<div className="w-14vw h-14vw typebtn absolute bottom-4 right-4 rounded-full bg-white"></div>
 									</div>
 								</div>
 								<div className="relative mx-4 my-3 flex">

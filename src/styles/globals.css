@@ -110,3 +110,22 @@
 /* --------------------------------------------------
 プロフィール
 -------------------------------------------------- */
+.typebtn {
+	background-image: url(/images/typebtn.svg);
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.time-bg {
+	@apply flex;
+}
+.time-bg:before {
+	content: "";
+	margin-right: 0.1em;
+	width: 1.3em;
+	height: 1.3em;
+	background-image: url(/images/time.svg?b);
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
