@@ -29,7 +29,7 @@ const Prof: FC<ProfProps> = (props) => {
 						onSlideChange={() => console.log("slide change")}
 						onSwiper={(swiper) => console.log(swiper)}
 					>
-						{girls.map((item) => (
+						{girls.map((item, index) => (
 							<SwiperSlide key={item.id}>
 								{/* <li key={item.id} className="h-100vh w-100vw overflow-hidden"> */}
 								<div className="relative flex w-full  border-b border-gray-300">
@@ -66,15 +66,7 @@ const Prof: FC<ProfProps> = (props) => {
 												<span>{item.area}</span>
 											</div>
 											<div className="flex items-center text-2.5vw">
-												<span className="time-bg pr-1">最終ログイン</span>
-												<span className="">
-													{new Date().toLocaleString("ja-JP", {
-														month: "2-digit",
-														day: "2-digit",
-														hour: "2-digit",
-														minute: "2-digit",
-													})}
-												</span>
+												<span className="time-bg pr-1">最終ログイン {item.logintime}</span>
 											</div>
 										</div>
 										<div className="w-14vw h-14vw typebtn absolute bottom-4 right-4 rounded-full bg-white"></div>
