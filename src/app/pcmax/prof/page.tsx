@@ -69,7 +69,7 @@ const Prof: FC<ProfProps> = (props) => {
 												<span className="time-bg pr-1">最終ログイン {item.logintime}</span>
 											</div>
 										</div>
-										<div className="w-14vw h-14vw typebtn absolute bottom-4 right-4 rounded-full bg-white"></div>
+										<div className="typebtn absolute bottom-4 right-4 h-14vw w-14vw rounded-full bg-white"></div>
 									</div>
 								</div>
 								<div className="relative mx-4 my-3 flex">

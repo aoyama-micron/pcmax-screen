@@ -1,6 +1,6 @@
 import girls from "@/app/pcmax/message.json";
-import Footer from "@/app/pcmax/message/footer";
-import Header from "@/app/pcmax/message/header";
+import Footer from "@/app/pcmax/seek/footer";
+import Header from "@/app/pcmax/seek/header";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { FC } from "react";
