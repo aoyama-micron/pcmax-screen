@@ -46,7 +46,7 @@ const Seek: FC<SeekProps> = (props) => {
 								<div className="flex-0-0-22vw mr-3 w-22vw">
 									<Image
 										className="block rounded"
-										src={`/images/${item.id}.jpg`}
+										src={`/images/${item.id}.jpg?abc`}
 										width={200}
 										height={200}
 										alt="Next.js"

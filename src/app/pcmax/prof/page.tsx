@@ -49,7 +49,7 @@ const Prof: FC<ProfProps> = (props) => {
 								<div className="relative h-100vw w-full">
 									<Image
 										className="block"
-										src={`/images/prof/prof_${item.id}.jpg?a`}
+										src={`/images/prof/prof_${item.id}.jpg?abc`}
 										alt="Next.js"
 										priority
 										fill
