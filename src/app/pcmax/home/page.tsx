@@ -24,10 +24,11 @@ export const metadata: Metadata = {
 };
 
 const Home: FC<HomeProps> = (props) => {
-	const shuffledGirls = shuffle(girls);
+	//const shuffledGirls = shuffle(girls);
 	return (
 		<>
 			<Header />
+
 			<main className="min-h-screen py-5">
 				<ul className="mx-3 grid grid-cols-2">
 					{girls.map((item) => (

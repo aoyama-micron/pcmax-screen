@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 const Seek: FC<SeekProps> = (props) => {
-	const shuffledGirls = shuffle(girls);
+	//const shuffledGirls = shuffle(girls);
 	let seektime = new Date();
 
 	return (
